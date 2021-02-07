@@ -6,9 +6,6 @@ files:
   - source: index.html
     destination: /var/lib/tomcat/webapps/web/
 hooks:
-  ApplicationStop:
-    - location: stop_application.sh
-      timeout: 300
   ApplicationStart:
     - location: startup_script.sh
       timeout: 300
