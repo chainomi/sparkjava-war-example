@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/*.war
+  - source: /target/sparkjava-hello-world-1.0.1.war
     destination: /var/lib/tomcat/webapps/
   - source: index.html
     destination: /var/lib/tomcat/webapps/web/
