@@ -5,13 +5,12 @@ files:
     destination: /var/lib/tomcat/webapps/
 hooks:
   BeforeInstall:
-    - location: /scripts/install_dependencies.sh
+    - location: /scripts/install_dependencies
       timeout: 300
       runas: root
-  ApplicationStart:
-    - location: scripts/startup_script.sh
+    - location: scripts/startup_script
     - runas: root
       timeout: 300
   ApplicationStop:
-    - location: /scripts/stop_application.sh
+    - location: /scripts/stop_application
       runas: root
