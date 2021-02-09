@@ -1,13 +1,13 @@
 version: 0.0
 os: linux
 files:
-  - source: /target/sparkjava-hello-world-1.0.1.war
+  - source: /target/*.war
     destination: /var/lib/tomcat/webapps/
   - source: index.html
     destination: /var/lib/tomcat/webapps/web/
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
+    - location: /scripts/install_dependencies.sh
       timeout: 300
       runas: root
   ApplicationStart:
@@ -15,5 +15,5 @@ hooks:
     - runas: root
       timeout: 300
   ApplicationStop:
-    - location: scripts/stop_application.sh
+    - location: /scripts/stop_application.sh
       runas: root
