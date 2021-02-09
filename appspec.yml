@@ -6,10 +6,14 @@ files:
   - source: index.html
     destination: /var/lib/tomcat/webapps/web/
 hooks:
-  ApplicationStop:
-    - location: scripts/stop_application.sh
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      timeout: 300
       runas: root
   ApplicationStart:
     - location: scripts/startup_script.sh
     - runas: root
       timeout: 300
+  ApplicationStop:
+    - location: scripts/stop_application.sh
+      runas: root
