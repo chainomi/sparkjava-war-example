@@ -6,7 +6,7 @@ files:
   - source: index.html
     destination: /var/lib/tomcat/webapps/web/
 hooks:
-ApplicationStop:
+  ApplicationStop:
     - location: scripts/stop_application.sh
       runas: root
   ApplicationStart:
