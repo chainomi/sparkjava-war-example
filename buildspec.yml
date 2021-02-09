@@ -12,5 +12,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-    name: sparkjava-war-example.zip
   discard-paths: no
