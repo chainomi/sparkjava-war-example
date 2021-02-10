@@ -1,2 +1,5 @@
 #!/bin/bash
-service tomcat stop
+isExistApp = `pgrep tomcat`
+if [[ -n  $isExistApp ]]; then
+    service tomcat stop        
+fi
